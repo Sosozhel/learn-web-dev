@@ -3,94 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Барбершоп — выбор даты и времени</title>
+  <meta name="theme-color" content="#f5f1ea">
+  <title>Выбор даты и времени — Борода &amp; Ножницы</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="logo">BARBERSHOP</a>
-    <nav class="nav">
-      <a href="#" class="nav__link">Услуги</a>
-      <a href="#" class="nav__link">Мастера</a>
-      <a href="#" class="nav__link">Контакты</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Борода и Ножницы — главная">БОРОДА <span>&amp;</span> НОЖНИЦЫ</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <a class="site-nav__link" href="#services">Услуги</a>
+      <a class="site-nav__link" href="#masters">Мастера</a>
+      <a class="site-nav__link" href="#reviews">Отзывы</a>
+      <a class="site-nav__link" href="#contacts">Контакты</a>
     </nav>
   </header>
 
   <main class="booking">
-    <h1 class="booking__title">Выбор даты и времени</h1>
+    <nav class="steps" aria-label="Этапы записи">
+      <span class="steps__item steps__item--done"><span class="steps__number">✓</span><span>Мастер</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item steps__item--done"><span class="steps__number">✓</span><span>Услуга</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item steps__item--current" aria-current="step"><span class="steps__number">3</span><span>Дата и время</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item"><span class="steps__number">4</span><span>Контакты</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item"><span class="steps__number">5</span><span>Подтверждение</span></span>
+    </nav>
 
-    <section class="calendar">
-      <div class="calendar__head">
-        <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">‹</button>
-        <span class="calendar__month">Октябрь 2026</span>
-        <button class="calendar__arrow" type="button" aria-label="Следующий месяц">›</button>
-      </div>
+    <div class="booking__heading">
+      <h1 class="booking__title">Выберите дату и время</h1>
+      <p class="booking__subtitle">Стрижка + борода · 90 мин · Шаг 3 из 5</p>
+    </div>
 
-      <ul class="calendar__weekdays">
-        <li class="calendar__weekday">Пн</li>
-        <li class="calendar__weekday">Вт</li>
-        <li class="calendar__weekday">Ср</li>
-        <li class="calendar__weekday">Чт</li>
-        <li class="calendar__weekday">Пт</li>
-        <li class="calendar__weekday">Сб</li>
-        <li class="calendar__weekday">Вс</li>
-      </ul>
+    <div class="booking__choices">
+      <section class="calendar" aria-labelledby="calendar-title">
+        <div class="calendar__header">
+          <h2 class="calendar__month" id="calendar-title">Ноябрь 2026</h2>
+          <div class="calendar__controls">
+            <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">‹</button>
+            <button class="calendar__arrow" type="button" aria-label="Следующий месяц">›</button>
+          </div>
+        </div>
+        <div class="calendar__grid" role="grid" aria-label="Календарь на ноябрь 2026">
+          <span class="calendar__weekday" role="columnheader">Пн</span><span class="calendar__weekday" role="columnheader">Вт</span><span class="calendar__weekday" role="columnheader">Ср</span><span class="calendar__weekday" role="columnheader">Чт</span><span class="calendar__weekday" role="columnheader">Пт</span><span class="calendar__weekday" role="columnheader">Сб</span><span class="calendar__weekday" role="columnheader">Вс</span>
+          <span class="calendar__day calendar__day--outside" role="gridcell">26</span><span class="calendar__day calendar__day--outside" role="gridcell">27</span><span class="calendar__day calendar__day--outside" role="gridcell">28</span><span class="calendar__day calendar__day--outside" role="gridcell">29</span><span class="calendar__day calendar__day--outside" role="gridcell">30</span><span class="calendar__day calendar__day--outside" role="gridcell">31</span>
+          <button class="calendar__day" type="button" aria-label="1 ноября">1</button><button class="calendar__day" type="button" aria-label="2 ноября">2</button><button class="calendar__day" type="button" aria-label="3 ноября">3</button><button class="calendar__day" type="button" aria-label="4 ноября">4</button><button class="calendar__day calendar__day--selected" type="button" aria-label="5 ноября, выбрано" aria-pressed="true">5</button><button class="calendar__day" type="button" aria-label="6 ноября">6</button><button class="calendar__day calendar__day--busy" type="button" aria-label="7 ноября, нет свободных окон" disabled>7</button>
+          <button class="calendar__day" type="button" aria-label="8 ноября">8</button><button class="calendar__day" type="button" aria-label="9 ноября">9</button><button class="calendar__day" type="button" aria-label="10 ноября">10</button><button class="calendar__day" type="button" aria-label="11 ноября">11</button><button class="calendar__day" type="button" aria-label="12 ноября">12</button><button class="calendar__day" type="button" aria-label="13 ноября">13</button><button class="calendar__day" type="button" aria-label="14 ноября">14</button>
+          <button class="calendar__day" type="button" aria-label="15 ноября">15</button><button class="calendar__day" type="button" aria-label="16 ноября">16</button><button class="calendar__day" type="button" aria-label="17 ноября">17</button><button class="calendar__day" type="button" aria-label="18 ноября">18</button><button class="calendar__day" type="button" aria-label="19 ноября">19</button><button class="calendar__day" type="button" aria-label="20 ноября">20</button><button class="calendar__day" type="button" aria-label="21 ноября">21</button>
+          <button class="calendar__day" type="button" aria-label="22 ноября">22</button><button class="calendar__day" type="button" aria-label="23 ноября">23</button><button class="calendar__day" type="button" aria-label="24 ноября">24</button><button class="calendar__day" type="button" aria-label="25 ноября">25</button><button class="calendar__day" type="button" aria-label="26 ноября">26</button><button class="calendar__day" type="button" aria-label="27 ноября">27</button><button class="calendar__day" type="button" aria-label="28 ноября">28</button>
+          <button class="calendar__day" type="button" aria-label="29 ноября">29</button><button class="calendar__day" type="button" aria-label="30 ноября">30</button><span class="calendar__day calendar__day--outside" role="gridcell">1</span><span class="calendar__day calendar__day--outside" role="gridcell">2</span><span class="calendar__day calendar__day--outside" role="gridcell">3</span><span class="calendar__day calendar__day--outside" role="gridcell">4</span><span class="calendar__day calendar__day--outside" role="gridcell">5</span><span class="calendar__day calendar__day--outside" role="gridcell">6</span>
+        </div>
+        <p class="calendar__note"><span class="calendar__note-mark" aria-hidden="true"></span>На этот день нет свободных окон</p>
+      </section>
 
-      <ul class="calendar__days">
-        <li class="calendar__day calendar__day--empty"></li>
-        <li class="calendar__day calendar__day--empty"></li>
-        <li class="calendar__day">1</li>
-        <li class="calendar__day">2</li>
-        <li class="calendar__day">3</li>
-        <li class="calendar__day calendar__day--busy">4</li>
-        <li class="calendar__day">5</li>
-        <li class="calendar__day">6</li>
-        <li class="calendar__day calendar__day--active">7</li>
-        <li class="calendar__day">8</li>
-        <li class="calendar__day">9</li>
-        <li class="calendar__day">10</li>
-        <li class="calendar__day calendar__day--busy">11</li>
-        <li class="calendar__day">12</li>
-        <li class="calendar__day">13</li>
-        <li class="calendar__day">14</li>
-        <li class="calendar__day">15</li>
-        <li class="calendar__day">16</li>
-        <li class="calendar__day">17</li>
-        <li class="calendar__day">18</li>
-        <li class="calendar__day">19</li>
-        <li class="calendar__day">20</li>
-        <li class="calendar__day">21</li>
-        <li class="calendar__day">22</li>
-        <li class="calendar__day">23</li>
-        <li class="calendar__day">24</li>
-        <li class="calendar__day">25</li>
-        <li class="calendar__day">26</li>
-        <li class="calendar__day">27</li>
-        <li class="calendar__day">28</li>
-        <li class="calendar__day">29</li>
-        <li class="calendar__day">30</li>
-        <li class="calendar__day">31</li>
-      </ul>
-    </section>
+      <section class="slots" aria-labelledby="slots-title">
+        <h2 class="slots__title" id="slots-title">Свободное время</h2>
+        <p class="slots__date">5 ноября, четверг</p>
+        <div class="slots__list" aria-label="Время записи">
+          <button class="slots__item" type="button" aria-pressed="false">10:00</button>
+          <button class="slots__item slots__item--busy" type="button" disabled aria-label="11:00, занято">11:00 · занято</button>
+          <button class="slots__item slots__item--selected" type="button" aria-pressed="true">12:00</button>
+          <button class="slots__item" type="button" aria-pressed="false">14:00</button>
+          <button class="slots__item slots__item--busy" type="button" disabled aria-label="15:00, занято">15:00 · занято</button>
+          <button class="slots__item" type="button" aria-pressed="false">16:00</button>
+          <button class="slots__item" type="button" aria-pressed="false">17:00</button>
+        </div>
+        <p class="slots__legend"><span class="slots__legend-mark" aria-hidden="true"></span>Время занято</p>
+      </section>
+    </div>
 
-    <section class="slots">
-      <h2 class="slots__title">Свободное время</h2>
-      <ul class="slots__list">
-        <li class="slots__item">10:00</li>
-        <li class="slots__item">11:30</li>
-        <li class="slots__item slots__item--busy">13:00</li>
-        <li class="slots__item">14:30</li>
-        <li class="slots__item">16:00</li>
-        <li class="slots__item slots__item--busy">17:30</li>
-        <li class="slots__item">19:00</li>
-      </ul>
-    </section>
-
-    <button class="booking__submit" type="button">Записаться</button>
+    <div class="booking__actions">
+      <a class="button button--secondary" href="#service">Назад</a>
+      <button class="button button--primary" type="button">Далее</button>
+    </div>
   </main>
 
-  <footer class="footer">
-    <p class="footer__text">© 2026 Barbershop. Все права защищены.</p>
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__column"><h2>БОРОДА &amp; НОЖНИЦЫ</h2><p>Барбершоп для тех, кто ценит стиль</p></div>
+      <div class="site-footer__column"><h2>КОНТАКТЫ</h2><p>ул. Садовая, 15, Москва</p><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+      <div class="site-footer__column"><h2>РЕЖИМ РАБОТЫ</h2><p>Пн–Пт: 9:00–21:00</p><p>Сб–Вс: 10:00–19:00</p></div>
+    </div>
+    <p class="site-footer__copyright">© 2026 Борода &amp; Ножницы. Все права защищены.</p>
   </footer>
 </body>
 </html>
