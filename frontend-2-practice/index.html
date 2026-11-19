@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1ea">
+  <title>Выбор даты и времени — Борода &amp; Ножницы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Борода и Ножницы — главная">БОРОДА <span>&amp;</span> НОЖНИЦЫ</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <a class="site-nav__link" href="#services">Услуги</a>
+      <a class="site-nav__link" href="#masters">Мастера</a>
+      <a class="site-nav__link" href="#reviews">Отзывы</a>
+      <a class="site-nav__link" href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="booking">
+    <nav class="steps" aria-label="Этапы записи">
+      <span class="steps__item steps__item--done"><span class="steps__number">✓</span><span>Мастер</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item steps__item--done"><span class="steps__number">✓</span><span>Услуга</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item steps__item--current" aria-current="step"><span class="steps__number">3</span><span>Дата и время</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item"><span class="steps__number">4</span><span>Контакты</span></span>
+      <span class="steps__line" aria-hidden="true"></span>
+      <span class="steps__item"><span class="steps__number">5</span><span>Подтверждение</span></span>
+    </nav>
+
+    <div class="booking__heading">
+      <h1 class="booking__title">Выберите дату и время</h1>
+      <p class="booking__subtitle">Стрижка + борода · 90 мин · Шаг 3 из 5</p>
+    </div>
+
+    <div class="booking__choices">
+      <section class="calendar" aria-labelledby="calendar-title">
+        <div class="calendar__header">
+          <h2 class="calendar__month" id="calendar-title"></h2>
+          <div class="calendar__controls">
+            <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">‹</button>
+            <button class="calendar__arrow" type="button" aria-label="Следующий месяц">›</button>
+          </div>
+        </div>
+        <div class="calendar__grid" role="grid" aria-label="Календарь">
+          <span class="calendar__weekday" role="columnheader">Пн</span><span class="calendar__weekday" role="columnheader">Вт</span><span class="calendar__weekday" role="columnheader">Ср</span><span class="calendar__weekday" role="columnheader">Чт</span><span class="calendar__weekday" role="columnheader">Пт</span><span class="calendar__weekday" role="columnheader">Сб</span><span class="calendar__weekday" role="columnheader">Вс</span>
+        </div>
+        <p class="calendar__note" hidden><span class="calendar__note-mark" aria-hidden="true"></span>На этот день нет свободных окон</p>
+      </section>
+
+      <section class="slots" aria-labelledby="slots-title">
+        <h2 class="slots__title" id="slots-title">Свободное время</h2>
+        <p class="slots__date"></p>
+        <div class="slots__list" aria-label="Время записи"></div>
+        <p class="slots__legend"><span class="slots__legend-mark" aria-hidden="true"></span>Время занято</p>
+      </section>
+    </div>
+
+    <div class="booking__summary" aria-live="polite">
+      <span class="booking__summary-label">Вы выбрали:</span>
+      <strong class="booking__summary-value"></strong>
+    </div>
+
+    <div class="booking__actions">
+      <a class="button button--secondary" href="#service">Назад</a>
+      <button class="button button--primary" type="button">Далее</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__column"><h2>БОРОДА &amp; НОЖНИЦЫ</h2><p>Барбершоп для тех, кто ценит стиль</p></div>
+      <div class="site-footer__column"><h2>КОНТАКТЫ</h2><p>ул. Садовая, 15, Москва</p><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+      <div class="site-footer__column"><h2>РЕЖИМ РАБОТЫ</h2><p>Пн–Пт: 9:00–21:00</p><p>Сб–Вс: 10:00–19:00</p></div>
+    </div>
+    <p class="site-footer__copyright">© 2026 Борода &amp; Ножницы. Все права защищены.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
